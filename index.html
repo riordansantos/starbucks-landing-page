@@ -1,15 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Starbucks Website Landing Page</title>
-</head>
-<body>
+  </head>
+  <body>
     <section>
-        
+      <div class="circle"></div>
+      <header>
+        <a href="#"><img class="logo" src="./assets/logo.png" /></a>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">What's New</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>It's not just Coffee<br />It's <span>Starbucks</span></h2>
+          <p>
+            Since we opened our first store in 1971, we have been looking for the
+            trust and respect of our customers, partners (as we call our
+            employees) and neighbors. How? Taking responsibility and doing good
+            things for the planet and for people.
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="imgBox">
+          <img src="./assets/img1.png" class="starbucks" />
+        </div>
+        <ul class="thumb">
+          <li>
+            <img
+              src="./assets/thumb1.png"
+              onclick="imgSlider('./assets/img1.png'); handleChangeColor('#017143');"
+            />
+          </li>
+          <li>
+            <img
+              src="./assets/thumb2.png"
+              onclick="imgSlider('./assets/img2.png'); handleChangeColor('#eb7495');"
+            />
+          </li>
+          <li>
+            <img
+              src="./assets/thumb3.png"
+              onclick="imgSlider('./assets/img3.png'); handleChangeColor('#d752b1');"
+            />
+          </li>
+        </ul>
+        <ul class="sci">
+          <li>
+            <a href="#"><img src="./assets/facebook.png" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./assets/twitter.png" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./assets/instagram.png" /></a>
+          </li>
+        </ul>
+      </div>
     </section>
-</body>
+    <script type="text/javascript">
+      function imgSlider(anything) {
+        document.querySelector(".starbucks").src = anything;
+      }
+
+      function handleChangeColor(color) {
+        const circle = document.querySelector(".circle");
+        circle.style.background = color;
+      }
+    </script>
+  </body>
 </html>
